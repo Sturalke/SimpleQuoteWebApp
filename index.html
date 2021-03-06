@@ -4,22 +4,39 @@
 	<title>App</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600&display=swap" rel="stylesheet">
 	<!-- <link rel="shortcut icon" type="image/png" href="favicon.png"/> -->
 	<link rel="stylesheet" href="style.css" />
-	<script type="text/javascript" src="script.js"></script>
 	
 </head>
 <body>
 	<div id="content">
 		<div id="container">
 			<div id="backdrop">
-				<div id="quotecontainer" class="absolute-center">
+				<div id="qcontainer" class="absolute-center">
 					<div id="quotecontent">
-					
+						<div id="quotecontainer" class="breakword">
+							<p id="quote" class="quote customfont">
+								Quote.
+							</p>
+						</div>
+						<div id="authorcontainer" class="breakword">
+							<p id="author" class="author customfont">
+								- author
+							</p>
+						</div>
+						<div id="buttons">
+							<div id="newquote">
+								<input type="button" value="New Quote" onclick="getQuote();" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
