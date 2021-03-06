@@ -9,10 +9,11 @@
 	<!-- <link rel="shortcut icon" type="image/png" href="favicon.png"/> -->
 	<link rel="stylesheet" href="style.css" />
 	<script type="text/javascript">
+		// Get a quote the moment the page finishes loading
 		document.addEventListener('DOMContentLoaded', function() {
 			setTimeout(function(){
 				getQuote();
-			}, 500);
+			}, 1000);
 		}, false);
 	</script>
 </head>
@@ -34,12 +35,12 @@
 						</div>
 						<div id="buttons">
 							<div id="newquote">
-								<input type="button" value="New Quote" onclick="getQuote();" />
+								<input type="button" class="my-button" value="New Quote" onclick="getQuote();" />
 							</div>
 						</div>
 					</div>
 					<div id="loadercontainer" class="loader-container-active">
-						<div id="loader" class="loader" class="loader-active">
+						<div id="loader" class="loader loader-active">
 						
 						</div>
 					</div>

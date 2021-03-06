@@ -66,8 +66,12 @@ body {
 	margin: 0;
 	margin-top: 10px;
 	margin-bottom: 25px;
-	font-size: 24px;
+	font-size: 32px;
 	text-align: center;
+}
+
+.long-quote {
+	font-size: 24px;
 }
 
 #authorcontainer {
@@ -91,11 +95,33 @@ body {
 #newquote {
 	position: absolute;
 	right: 10px;
-	top: 10px;
+}
+
+.my-button {
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:5px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.my-button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.my-button:active {
+	position:relative;
+	top: 1px;
 }
 
 .loader-container-active {
-	background-color: rgba(160,160,160,0.7);
+	background-color: rgba(170,170,170,0.7);
 }
 
 #loadercontainer {

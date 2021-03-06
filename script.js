@@ -5,8 +5,6 @@ const newQuoteBtn = document.getElementById("newquote");
 const loaderContainer = document.getElementById("loadercontainer");
 const loader = document.getElementById("loader");
 
-var recentData;
-
 // Get Quote From Forismatic API
 async function getQuote() {
 
@@ -23,7 +21,6 @@ async function getQuote() {
       // retrieve response from fetch JS function
       const response = await fetch(proxyUrl + apiUrl);
       const data = await response.json();
-	  recentData = data;
 
 
     // Check if Author field is available, if not replace it with 'Not Available'
@@ -48,7 +45,7 @@ async function getQuote() {
 
     // Stop Loading, Show Quote: write code here
 	loaderContainer.classList.remove("loader-container-active");
-  loader.classList.remove("loader-active");
+    loader.classList.remove("loader-active");
   
   } catch (error) {
         getQuote();
