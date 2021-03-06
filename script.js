@@ -2,7 +2,8 @@ const quoteContainer = document.getElementById("quotecontent");
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const newQuoteBtn = document.getElementById("newquote");
-//const loader = document.getElementById("loader");
+const loaderContainer = document.getElementById("loadercontainer");
+const loader = document.getElementById("loader");
 
 var recentData;
 
@@ -10,7 +11,8 @@ var recentData;
 async function getQuote() {
 
   // Showing loading screen
-  
+  loaderContainer.classList.add("loader-container-active");
+  loader.classList.add("loader-active");
   
   
   // We need to use a Proxy URL to make our API call in order to avoid a weird yet specific error
@@ -45,8 +47,10 @@ async function getQuote() {
     quoteText.innerHTML = data.quoteText;
 
     // Stop Loading, Show Quote: write code here
+	loaderContainer.classList.remove("loader-container-active");
+  loader.classList.remove("loader-active");
   
   } catch (error) {
-        //getQuote();
+        getQuote();
   }
 }

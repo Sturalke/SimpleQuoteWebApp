@@ -31,7 +31,7 @@ body {
 }
 
 #qcontainer {
-	
+	position: relative;
 	align-self: center;
 	
 	width: 96%;
@@ -64,8 +64,10 @@ body {
 
 .quote {
 	margin: 0;
+	margin-top: 10px;
 	margin-bottom: 25px;
 	font-size: 24px;
+	text-align: center;
 }
 
 #authorcontainer {
@@ -90,4 +92,70 @@ body {
 	position: absolute;
 	right: 10px;
 	top: 10px;
+}
+
+.loader-container-active {
+	background-color: rgba(160,160,160,0.7);
+}
+
+#loadercontainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	
+	pointer-events: none;
+	
+	transition: background-color .25s ease-in-out;
+	-moz-transition: background-color .25s ease-in-out;
+	-webkit-transition: background-color .25s ease-in-out;
+}
+
+#loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -25px;
+	width: 50px;
+	height: 50px;
+}
+
+.loader {
+	border: 10px solid transparent;
+	border-top-color: #2350b8;
+	border-bottom-color: #2350b8;
+	border-radius: 50%;
+	opacity: 0%;
+	-webkit-animation: spin 1s ease infinite;
+	animation: spin 1s ease infinite;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+@-webkit-keyframes spin {
+  	0%{
+		-webkit-transform: rotate(0deg);
+		tranform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+		tranform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0%{
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.loader-active {
+	opacity: 100%;
 }

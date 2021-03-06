@@ -8,28 +8,39 @@
 	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600&display=swap" rel="stylesheet">
 	<!-- <link rel="shortcut icon" type="image/png" href="favicon.png"/> -->
 	<link rel="stylesheet" href="style.css" />
-	
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			setTimeout(function(){
+				getQuote();
+			}, 500);
+		}, false);
+	</script>
 </head>
 <body>
 	<div id="content">
 		<div id="container">
 			<div id="backdrop">
-				<div id="qcontainer" class="absolute-center">
+				<div id="qcontainer">
 					<div id="quotecontent">
 						<div id="quotecontainer" class="breakword">
 							<p id="quote" class="quote customfont">
-								Quote.
+								&nbsp;
 							</p>
 						</div>
 						<div id="authorcontainer" class="breakword">
 							<p id="author" class="author customfont">
-								- author
+								- Unknown
 							</p>
 						</div>
 						<div id="buttons">
 							<div id="newquote">
 								<input type="button" value="New Quote" onclick="getQuote();" />
 							</div>
+						</div>
+					</div>
+					<div id="loadercontainer" class="loader-container-active">
+						<div id="loader" class="loader" class="loader-active">
+						
 						</div>
 					</div>
 				</div>
